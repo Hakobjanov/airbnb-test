@@ -30,13 +30,14 @@ a {
   margin: 0 auto;
 }
 
+/*header styles (menu and logo)*/
 .nav {
   width: 100%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin: 4.5rem 0rem 13.8rem;
+  margin: 4.5rem 0 13.8rem;
 }
 
 #logo {
@@ -69,8 +70,8 @@ a {
 }
 
 .btn {
-  font-size: 16px;
-  line-height: 19px;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
   font-style: normal;
   font-weight: bold;
   color: #fff;
@@ -83,15 +84,16 @@ a {
 }
 
 .btn:hover {
-  color: #ff5a5f;
-  background: #fff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.45);
 }
 
 .signUp {
   padding: 1.6rem 2.8rem;
 }
 
-.section {
+/*Contact us section styles*/
+/*general*/
+section {
   position: relative;
   width: 100%;
   height: 67.2rem;
@@ -101,6 +103,53 @@ a {
   background-repeat: no-repeat;
 }
 
+/*successfully sent message page styles*/
+.success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.success img {
+  margin: 13rem 5.9rem 0 10.1rem;
+}
+
+.success h2 {
+  text-align: center;
+  font-size: 3.2rem;
+  line-height: 3.8rem;
+  font-style: normal;
+  margin: 4rem 4.8rem 0;
+}
+.success h4 {
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  font-weight: normal;
+  margin: 4.8rem 2.6rem 0;
+}
+
+.greatBtn {
+  padding: 1.6rem 13.1rem;
+  margin: 6rem 4.8rem 4rem;
+
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  font-style: normal;
+  font-weight: bold;
+  color: #000;
+  background: #fff;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #000;
+}
+
+.greatBtn:hover {
+  background-color: #ff5a5f;
+}
+
+/*Contact us form styles*/
 .form-wrapper {
   width: 41.6rem;
   height: 76.3rem;
@@ -108,9 +157,9 @@ a {
   bottom: 0;
   right: 11%;
   margin: 0 3rem 0;
-  border-radius: 8px 8px 0px 0px;
+  border-radius: 8px 8px 0 0;
 
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
   background: #ffffff;
 }
 
@@ -153,9 +202,9 @@ a {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
+/*select SELECT2 jqueery styles god damn it*/
 .subject-form select,
 .form-item input {
   width: 32rem;
@@ -207,7 +256,7 @@ a {
 .select2-container--open .select2-dropdown--below {
   border: 1px solid #ebebeb;
   border-radius: 0.4rem;
-  box-shadow: 0px 15px 46px rgba(26, 26, 29, 0.12);
+  box-shadow: 0 15px 46px rgba(26, 26, 29, 0.12);
   padding: 1.2rem 0 0;
 }
 
@@ -215,25 +264,21 @@ a {
   display: flex;
   align-items: center;
   height: 4.4rem;
-  /* line-height: 4.4rem; */
   padding-left: 1.6rem;
 }
+
 .select2-container--default .select2-results__option[aria-selected="true"] {
   background-color: unset;
 }
+
 .select2-container--default
   .select2-results__option--highlighted[aria-selected] {
   background-color: #f7f7f7;
   color: #5a6bff;
 }
 
-/* .select2-selection__rendered {
-  background-color: red;
-} */
-
 .subject-form select {
   font-family: "Raleway", sans-serif;
-
   font-size: 1.6rem;
   line-height: 1.6rem;
   color: #212121;
@@ -241,9 +286,9 @@ a {
   font-weight: normal;
 }
 
+/*other inputs(name, phone, email, message, placeholders)*/
 .massage-form textarea {
   font-family: "Raleway", sans-serif;
-
   font-size: 1.6rem;
   line-height: 1.6rem;
   color: #212121;
@@ -273,7 +318,6 @@ textarea:focus {
 
 input[type="text"] {
   font-family: "Raleway", sans-serif;
-
   font-size: 1.6rem;
   line-height: 1.6rem;
   color: #212121;
@@ -305,7 +349,6 @@ input[type="text"]:focus,
 
 .send {
   padding: 1.6rem 12.7rem;
-
   width: 32rem;
   height: 5.2rem;
 }
@@ -314,27 +357,27 @@ input[type="text"]:focus,
   border: 1px solid red;
 }
 
-.invalid-feedback {
+.invalid-name,
+.invalid-phone,
+.invalid-email {
   display: none;
   font-family: "Raleway", sans-serif;
   color: red;
-  font-size: 12px;
-  line-height: 14px;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
   font-style: normal;
   font-weight: bold;
   text-align: right;
 }
 
-/* .loader {
-  animation: loading 1s infinite linear;
-  transform-box: fill-box;
-}*/
+/*send button loading styles*/
 :not(.loading) > .loader {
   display: none;
 }
+
 .loader img {
-  width: 24px;
-  height: 24px;
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 .hidden {
@@ -345,14 +388,13 @@ input[type="text"]:focus,
   display: none;
 }
 
+/*contacts styles*/
 .contacts {
   position: absolute;
-
   width: 30rem;
   height: 25.5rem;
-  left: 0px;
-  bottom: 0px;
-
+  left: 0;
+  bottom: 0;
   background: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(8px);
   border-radius: 0px 8px 0px 0px;
@@ -442,7 +484,7 @@ input[type="text"]:focus,
     position: fixed;
     cursor: pointer;
     right: 0;
-    margin: 0rem 5% 0rem 0rem;
+    margin: 0 5% 0 0;
     padding: 0.5rem;
     z-index: 5;
   }
@@ -451,8 +493,8 @@ input[type="text"]:focus,
     display: block;
     padding: 0.25rem 2rem;
     background-color: #ff5a5f;
-    margin: 0.6rem 0rem;
-    transition: all 0.4s ease;
+    margin: 0.6rem 0;
+    transition: all 0.3s ease;
   }
   .nav-links {
     background: black;
@@ -491,6 +533,9 @@ input[type="text"]:focus,
 }
 
 @media (max-width: 550px) {
+  .success img {
+    margin: 11rem 5.9rem 0 5.1rem;
+  }
   .form-wrapper {
     width: 31.6rem;
   }
@@ -517,13 +562,19 @@ input[type="text"]:focus,
 
   .subject-form select,
   .form-item input,
-  .select2-container--default .select2-selection--single {
-    width: 19.6rem;
+  .select2-container--default,
+  .select2-selection--single {
+    width: 19.6rem !important;
   }
 
   .form-item input::placeholder {
     font-size: 1.4rem;
     line-height: 1.3rem;
     line-height: 1.4rem;
+  }
+
+  .send {
+    padding: 1.6rem 7.7rem;
+    text-align: center;
   }
 }

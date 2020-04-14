@@ -19,8 +19,10 @@
     <title>AIRBNB Test</title>
   </head>
   <body>
+    <!--header-->
     <header class="header">
       <div class="container">
+        <!--navigation-->
         <nav class="nav">
           <div id="logo">
             <img src="./icons/Logo.png" alt="airbnb logo" />
@@ -33,10 +35,10 @@
               <a class="nav-link" href="#">Browse</a>
             </li>
             <li class="list-item">
-              <a class="nav-link" href="#g">Research</a>
+              <a class="nav-link" href="#">Research</a>
             </li>
             <li class="list-item">
-              <a class="nav-link" href="#c">About</a>
+              <a class="nav-link" href="#">About</a>
             </li>
             <li class="list-item">
               <a class="nav-link active" href="#">Contacts</a>
@@ -45,6 +47,7 @@
               <button class="btn signUp">Sign Up</button>
             </li>
           </ul>
+          <!--burger menu-->
           <div class="burger">
             <span class="line1"></span>
             <span class="line2"></span>
@@ -53,17 +56,25 @@
         </nav>
       </div>
     </header>
+
     <section class="section">
       <div class="form-wrapper">
+        <!--successfully sent message page-->
         <div class="success hidden">
-          <h2>Bombs have been planted</h2>
           <img src="./images/success.svg" alt="man and plane" />
-          <button class="greatBtn">GREAT</button>
+          <h2>We received your message!</h2>
+          <h4>
+            Thanks for contacting us! We will get back <br />
+            to you ASAP
+          </h4>
+
+          <button class="greatBtn">Great!</button>
         </div>
         <div class="form-title">
           <h2>Contact Us</h2>
         </div>
 
+        <!--Contact Us form-->
         <form action="" class="form">
           <div class="subject-form form-item">
             <label for="subject">Subject</label>
@@ -73,12 +84,11 @@
               <option>Сooperation</option>
               <option>Other</option>
             </select>
-            <!-- <input type="text"> -->
           </div>
           <div class="name-form form-item">
             <div class="form-head">
               <label for="name">Name</label>
-              <div class="invalid-feedback">Please, enter valid name</div>
+              <div class="invalid-name">Please, enter valid name</div>
             </div>
             <input
               id="name"
@@ -89,7 +99,12 @@
             />
           </div>
           <div class="phone-form form-item">
-            <label for="phone">Phone number</label>
+            <div class="form-head">
+              <label for="phone">Phone number</label>
+              <div class="invalid-phone">
+                Please, enter valid phone number
+              </div>
+            </div>
             <input
               id="phone"
               type="text"
@@ -97,10 +112,14 @@
               placeholder="Enter your phone number..."
               required
             />
-            <!-- <div class="invalid-feedback ">Name must be between 2 and 10 characters</div>   -->
           </div>
           <div class="email-form form-item">
-            <label for="email">Email</label>
+            <div class="form-head">
+              <label for="email">Email</label>
+              <div class="invalid-email">
+                Please, enter valid email address
+              </div>
+            </div>
             <input
               id="email"
               type="text"
@@ -108,7 +127,6 @@
               placeholder="Enter your email address..."
               required
             />
-            <!-- <div class="invalid-feedback ">Name must be between 2 and 10 characters</div> -->
           </div>
           <div class="massage-form form-item">
             <label for="message">Message</label>
@@ -120,26 +138,29 @@
             ></textarea>
           </div>
           <div class="sendBtn form-item">
+            <!--Send Button-->
             <button type="submit" value="Send" class="btn send">
               <div class="sendText">Send</div>
               <div class="loader">
-                <img src="./icons/loading.gif" alt="" />
+                <img src="./icons/loading.gif" alt="loading GIF" />
               </div>
             </button>
           </div>
         </form>
       </div>
+
+      <!--Contacts section-->
       <div class="contacts">
         <div class="contact our-location">
-          <img src="./icons/location-icon.png" alt="" />
+          <img src="./icons/location-icon.png" alt="location pin icon" />
           <h4>888 Brannan Street, in San Francisco, California</h4>
         </div>
         <div class="contact our-phone">
-          <img src="./icons/phone-icon.png" alt="" />
+          <img src="./icons/phone-icon.png" alt="phone icon" />
           <h4>+1 (039) 032 03 84</h4>
         </div>
         <div class="contact our-email">
-          <img src="./icons/envelope-icon.png" alt="" />
+          <img src="./icons/envelope-icon.png" alt="mail envelope icon" />
           <h4>info@airbnb.com</h4>
         </div>
       </div>

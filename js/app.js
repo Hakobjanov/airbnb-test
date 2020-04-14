@@ -2,20 +2,33 @@ const burgerBtn = document.querySelector(".burger");
 const nav = document.querySelector(".nav-links");
 const navLinks = document.querySelectorAll(".nav-link");
 const form = document.querySelector(".form");
-const name = document.getElementById("name");
-const feedback = document.querySelector(".invalid-feedback");
-const phoneNum = document.getElementById("phone");
-const email = document.getElementById("email");
+const name = document.querySelector("#name");
+const invalidPhone = document.querySelector(".invalid-phone");
+const invalidName = document.querySelector(".invalid-name");
+const invalidEmail = document.querySelector(".invalid-email");
+const phoneNum = document.querySelector("#phone");
+const email = document.querySelector("#email");
 const sendBtn = document.querySelector(".send");
 const success = document.querySelector(".success");
 const greatBtn = document.querySelector(".greatBtn");
 const message = document.querySelector("#message");
 
+//event listeners
 burgerBtn.addEventListener("click", toggleMenu);
 name.addEventListener("blur", validateName);
+email.addEventListener("blur", validateEmail);
+phone.addEventListener("blur", validatePhone);
 form.addEventListener("submit", sendMessage);
-
 greatBtn.addEventListener("click", hideFeedbackMessage);
+
+navLinks.forEach((link) => link.addEventListener("click", toggleMenu));
+
+//funcions
+function toggleMenu() {
+  console.log("efopi");
+  nav.classList.toggle("nav-active");
+  burgerBtn.classList.toggle("cross");
+}
 
 function sendMessage(e) {
   sendBtn.classList.add("loading");
@@ -44,26 +57,43 @@ function validateName() {
 
   if (!nameRegExp.test(name.value)) {
     name.classList.add("invalid");
-    feedback.style.display = "block";
+    invalidName.style.display = "block";
     name.value = "";
   } else {
     name.classList.remove("invalid");
-    feedback.style.display = "none";
+    invalidName.style.display = "none";
   }
 }
 
-//   let emailRegExp = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.+([a-zA-Z]{2,5})$/
-//   let phoneRegExp = /^[+]?\(\d{12})}$/; /^[+]?\d{2}?[- ]?\(?\d{3}\)?[- ]?\d{3}[- ]?\d{2}[- ]?\d{2}[- ]?$/
+function validateEmail() {
+  const email = document.getElementById("email");
+  let emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
-//select
+  if (!emailRegExp.test(email.value)) {
+    email.classList.add("invalid");
+    invalidEmail.style.display = "block";
+    email.value = "";
+  } else {
+    email.classList.remove("invalid");
+    invalidEmail.style.display = "none";
+  }
+}
+
+function validatePhone() {
+  const phone = document.getElementById("phone");
+  let phoneRegExp = /^[+]?\d{2}?[- ]?\(?\d{3}\)?[- ]?\d{3}[- ]?\d{2}[- ]?\d{2}[- ]?$/;
+
+  if (!phoneRegExp.test(phone.value)) {
+    phone.classList.add("invalid");
+    invalidPhone.style.display = "block";
+    phone.value = "";
+  } else {
+    phone.classList.remove("invalid");
+    invalidPhone.style.display = "none";
+  }
+}
+
+//select jquery
 $(".js-example-basic-single").select2({
   minimumResultsForSearch: -1,
 });
-
-navLinks.forEach((link) => link.addEventListener("click", toggleMenu));
-
-function toggleMenu() {
-  console.log("efopi");
-  nav.classList.toggle("nav-active");
-  burgerBtn.classList.toggle("cross");
-}
