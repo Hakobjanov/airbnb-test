@@ -3,22 +3,35 @@ const name = document.getElementById("name");
 const feedback = document.querySelector(".invalid-feedback");
 const phoneNum = document.getElementById("phone");
 const email = document.getElementById("email");
-const send = document.querySelector("send");
-const success = document.querySelector("success");
+const sendBtn = document.querySelector(".send");
+const success = document.querySelector(".success");
+const greatBtn = document.querySelector(".greatBtn");
+const message = document.querySelector("#message");
 
 name.addEventListener("blur", validateName);
 form.addEventListener("submit", sendMessage);
 
+greatBtn.addEventListener("click", hideFeedbackMessage);
+
 function sendMessage(e) {
-  //   document.querySelector(".sendText").style.display = "none";
-  //   document.querySelector(".loader").style.display = "block";
+  sendBtn.classList.add("loading");
 
-  setTimeout(sendMessage, 2000);
-
-  form.classList.add("hidden");
-  success.classList.remove("hidden");
+  setTimeout(() => {
+    form.classList.add("hidden");
+    success.classList.remove("hidden");
+    sendBtn.classList.remove("loading");
+  }, 2000);
 
   e.preventDefault();
+}
+
+function hideFeedbackMessage() {
+  form.classList.remove("hidden");
+  success.classList.add("hidden");
+  name.value = "";
+  phoneNum.value = "";
+  email.value = "";
+  message.value = "";
 }
 
 function validateName() {
