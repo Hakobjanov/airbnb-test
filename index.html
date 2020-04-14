@@ -5,9 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
     <meta name="description" content="Testing skills." />
-    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:400,500,700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" href="./icons/Logo1.png" />
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./styles/style.css" />
 
     <title>AIRBNB Test</title>
@@ -16,98 +22,125 @@
     <header class="header">
       <div class="container">
         <nav class="nav">
-            <div id="logo">
-                <img src="./icons/Logo.png" alt="airbnb logo">
-            </div>
-            <ul class="nav-links">
-              <li class="list-item">
-                <a class="nav-link" href="#">How it works?</a>
-              </li>
-              <li class="list-item">
-                <a class="nav-link" href="#">Browse</a>
-              </li>
-              <li class="list-item">
-                <a class="nav-link" href="#g">Research</a>
-              </li>
-              <li class="list-item">
-                <a class="nav-link" href="#c">About</a>
-              </li>
-              <li class="list-item">
-                <a class="nav-link" href="#">Contacts</a>
-              </li>
-              <li class="list-item">
-                <button class="btn signUp">Sign Up</button>
-              </li>
-            </ul>
+          <div id="logo">
+            <img src="./icons/Logo.png" alt="airbnb logo" />
+          </div>
+          <ul class="nav-links">
+            <li class="list-item">
+              <a class="nav-link" href="#">How it works?</a>
+            </li>
+            <li class="list-item">
+              <a class="nav-link" href="#">Browse</a>
+            </li>
+            <li class="list-item">
+              <a class="nav-link" href="#g">Research</a>
+            </li>
+            <li class="list-item">
+              <a class="nav-link" href="#c">About</a>
+            </li>
+            <li class="list-item">
+              <a class="nav-link active" href="#">Contacts</a>
+            </li>
+            <li class="list-item">
+              <button class="btn signUp">Sign Up</button>
+            </li>
+          </ul>
+          <div class="burger">
+            <span class="line1"></span>
+            <span class="line2"></span>
+            <span class="line3"></span>
+          </div>
+        </nav>
       </div>
     </header>
     <section class="section">
-        <div class="form-wrapper">
-            <div class="success hidden">
-                <h2>Bombs have been planted</h2>
-                <img src="./images/success.svg" alt="man and plane">
-                <button class="greatBtn">GREAT</button>
-            </div>
-          <div class="form-title">
-            <h2>Contact Us</h2>
-          </div>
+      <div class="form-wrapper">
+        <div class="success hidden">
+          <h2>Bombs have been planted</h2>
+          <img src="./images/success.svg" alt="man and plane" />
+          <button class="greatBtn">GREAT</button>
+        </div>
+        <div class="form-title">
+          <h2>Contact Us</h2>
+        </div>
 
-            <form action="" class="form">
-              <div class="subject-form form-item">
-                <label for="subject">Subject</label>
-                <select class="js-example-basic-single" name="subject" id="subject">
-                      <option>Work opportunities</option>
-                      <option>Questions about product</option>
-                      <option>Сooperation</option>
-                      <option>Other</option>
-                  </select>
-                  <!-- <input type="text"> -->
+        <form action="" class="form">
+          <div class="subject-form form-item">
+            <label for="subject">Subject</label>
+            <select class="js-example-basic-single" name="subject" id="subject">
+              <option>Work opportunities</option>
+              <option>Questions about product</option>
+              <option>Сooperation</option>
+              <option>Other</option>
+            </select>
+            <!-- <input type="text"> -->
+          </div>
+          <div class="name-form form-item">
+            <div class="form-head">
+              <label for="name">Name</label>
+              <div class="invalid-feedback">Please, enter valid name</div>
+            </div>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              placeholder="Enter your name..."
+              required
+            />
+          </div>
+          <div class="phone-form form-item">
+            <label for="phone">Phone number</label>
+            <input
+              id="phone"
+              type="text"
+              name="phone"
+              placeholder="Enter your phone number..."
+              required
+            />
+            <!-- <div class="invalid-feedback ">Name must be between 2 and 10 characters</div>   -->
+          </div>
+          <div class="email-form form-item">
+            <label for="email">Email</label>
+            <input
+              id="email"
+              type="text"
+              name="_replyto"
+              placeholder="Enter your email address..."
+              required
+            />
+            <!-- <div class="invalid-feedback ">Name must be between 2 and 10 characters</div> -->
+          </div>
+          <div class="massage-form form-item">
+            <label for="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Your message..."
+              required
+            ></textarea>
+          </div>
+          <div class="sendBtn form-item">
+            <button type="submit" value="Send" class="btn send">
+              <div class="sendText">Send</div>
+              <div class="loader">
+                <img src="./icons/loading.gif" alt="" />
               </div>
-              <div class="name-form form-item">
-                <div class='form-head'>
-                    <label for="name">Name</label>
-                    <div  class="invalid-feedback">Please, enter valid name</div>
-                </div> 
-                <input id="name" type="text" name="name" placeholder="Enter your name..." required />
-            </div>
-              <div class="phone-form form-item">
-                <label for="phone">Phone number</label>
-                <input id="phone" type="text" name="phone" placeholder="Enter your phone number..." required />
-                <!-- <div class="invalid-feedback ">Name must be between 2 and 10 characters</div>   -->
-            </div>
-              <div class="email-form form-item">
-                <label for="email">Email</label>
-                <input id="email" type="text" name="_replyto" placeholder="Enter your email address..." required />
-                <!-- <div class="invalid-feedback ">Name must be between 2 and 10 characters</div> -->
-            </div>
-              <div class="massage-form form-item">
-                <label for="message">Message</label>
-                <textarea name="message" id="message" placeholder="Your message..." required></textarea>
-              </div>
-              <div class='sendBtn form-item'>
-                  <button type="submit" value="Send" class="btn send">
-                      <div class='sendText'>Send</div>
-                      <div class="loader">
-                       <img src="./icons/loading.gif" alt=""> 
-                    </div>
-                    </button>
-                   
-                </div>
-            </form>
-        </div>
+            </button>
+          </div>
+        </form>
+      </div>
       <div class="contacts">
-          <div class="contact our-location">
-              <img src="./icons/location-icon.png" alt="">
-              <h4>888 Brannan Street, 
-                in San Francisco, California</h4>
-            </div>
-          <div class="contact our-phone">
-            <img src="./icons/phone-icon.png" alt="">
-            <h4>+1 (039) 032 03 84</h4>
+        <div class="contact our-location">
+          <img src="./icons/location-icon.png" alt="" />
+          <h4>888 Brannan Street, in San Francisco, California</h4>
         </div>
-          <div class="contact our-email">
-            <img src="./icons/envelope-icon.png" alt="">
-            <h4>info@airbnb.com</h4>
+        <div class="contact our-phone">
+          <img src="./icons/phone-icon.png" alt="" />
+          <h4>+1 (039) 032 03 84</h4>
+        </div>
+        <div class="contact our-email">
+          <img src="./icons/envelope-icon.png" alt="" />
+          <h4>info@airbnb.com</h4>
         </div>
       </div>
     </section>

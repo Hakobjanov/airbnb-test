@@ -1,3 +1,6 @@
+const burgerBtn = document.querySelector(".burger");
+const nav = document.querySelector(".nav-links");
+const navLinks = document.querySelectorAll(".nav-link");
 const form = document.querySelector(".form");
 const name = document.getElementById("name");
 const feedback = document.querySelector(".invalid-feedback");
@@ -8,6 +11,7 @@ const success = document.querySelector(".success");
 const greatBtn = document.querySelector(".greatBtn");
 const message = document.querySelector("#message");
 
+burgerBtn.addEventListener("click", toggleMenu);
 name.addEventListener("blur", validateName);
 form.addEventListener("submit", sendMessage);
 
@@ -55,3 +59,11 @@ function validateName() {
 $(".js-example-basic-single").select2({
   minimumResultsForSearch: -1,
 });
+
+navLinks.forEach((link) => link.addEventListener("click", toggleMenu));
+
+function toggleMenu() {
+  console.log("efopi");
+  nav.classList.toggle("nav-active");
+  burgerBtn.classList.toggle("cross");
+}
